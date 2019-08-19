@@ -1,0 +1,44 @@
+
+/**
+ * when you enter the hall, initially you don't know the total number of 
+ * lihgts in that hall. some lights are blowing and others not blowing,
+ * write a program that should return a total number of lights and number
+ * of blowing lights in that hall.
+ * 
+ * @author (JAYAPRAKASH K) 
+ * #Sweet Memory #life changing moment
+ */
+import java.util.*;
+public class BlowingLight {
+          public static void main(String args[])
+          {
+            Scanner in=new Scanner(System.in);
+            HashMap<Integer,String> hm=new HashMap<Integer,String>();
+            while(true)
+            {
+               System.out.println("Enter The Light Number: ");
+               int i=in.nextInt();
+               System.out.println("Blowing or Not?");
+                System.out.println("(Yes or No)");
+               String b=in.next();
+               hm.put(i,b);
+               System.out.println("DO you see more lights? ");
+               System.out.println("(Yes or No)");
+               String f=in.next();
+               if(f.equals("No"))
+               break;
+            
+            }
+            int total_lights=0;
+            int blowing_lights=0;
+            for(int z:hm.keySet())
+            {
+               total_lights+=1;
+               if(hm.get(z).equals("Yes"))
+               blowing_lights+=1;
+            
+            }
+            System.out.println("Total Number of Lights: "+total_lights);
+            System.out.println("Total Number of Blowing Lights: "+blowing_lights);
+            }
+}
